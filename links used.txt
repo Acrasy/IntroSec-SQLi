@@ -1,3 +1,8 @@
+http://www.w3schools.com/sql/
+http://www.kalitutorials.net/2014/03/sql-injection-how-it-works.html
+http://www.kalitutorials.net/2014/03/hacking-websites-using-sql-injection.html
+http://www.kalitutorials.net/2015/02/blind-sql-injection.html
+http://www.kalitutorials.net/2014/03/hacking-website-with-sqlmap-in-kali.html
 https://www.youtube.com/watch?v=clczL7x1T4Y
 https://www.youtube.com/watch?v=jSPr3MPPLLM
 https://www.youtube.com/watch?v=yPMbb38pwVI
