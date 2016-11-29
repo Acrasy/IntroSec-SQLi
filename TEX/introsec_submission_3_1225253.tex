@@ -1,0 +1,157 @@
+\documentclass{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman, english]{babel}
+\selectlanguage{english}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{upquote}
+\usepackage{csvsimple}
+
+\lstset{ %
+	frame=single,
+	numbers=left,
+	breaklines=true,
+	breakautoindent=false,
+	breakatwhitespace=true,
+	% keepspaces=true,
+	basicstyle=\ttfamily,
+	upquote=true,
+}
+
+\newcommand\solution[2]{{\paragraph{#1}#2}}
+\newcommand\todo[1]{TODO: #1}
+
+
+\title{Assignment 3 - SQL Injection}
+\author{$<Simon>$ $<Rommer>$, $<1225253>$}
+\date\today{}
+
+\begin{document}
+	
+	\maketitle
+	
+	\begin{abstract}
+		
+		A friend of yours has asked you to perform a security audit on the administration of members in her golf club. She asks you to test if there are any security issues concerning the MySQL database implementation. She gives you a short introduction to the system, but leaves you to find out other information you need for your test:
+		
+	\end{abstract}
+	
+	
+	
+	\section{SQL Injection}
+	
+	\section*{Assignment}
+	Be aware that SQL injection can be a cumbersome task and it may take a while
+	until you find the right query. Therefore it is advisable to start the
+	assignment early and get back to it after a while when you find yourself stuck.
+	You might want to read a bit into the syntax of SQL and search for information
+	on SQL injection. In this assignment you will exercise what is called a ``Blind
+	SQL injection'' which means you will not get any error messages from the server
+	if the query you passed is wrong or doesn't yield any results. Note that in
+	this exercise no output can mean you are on a good way. 
+	
+	
+	
+	\section*{Level 1}
+	\subsection*{Assignment}
+	Try to login without having any user data.
+	
+	\subsection*{Description}
+	\solution{Username}{asdf}
+	\solution{PIN}{' or '1' = '1} 
+	
+	I used the escape character $'$ to escape the input query and be able to type in something that was interpreted as actual code. \\
+	The most simple SQL-Injection is $ ' or '1' = '1 $ which means in the context of the login prompt that the login was successful if the right user was found or $1=1$ is true \footnote{\url{https://www.youtube.com/watch?v=FwIUkAwKzG8}}. This is always the case so the login was successful. I tried out different combination, but it seemed that the Username field was propperly escaped hence the PIN-field was vulnerable.\\
+	After that I was logged in as the first user in the  database \footnote{\url{https://www.youtube.com/watch?v=h-9rHTLHJTY}}. After logging in I looked through the "logininfo" and it said that I was logged in as exactly what I typed in and not as a regular user.
+	I really want to know if there was a regular user set up in the first place.
+	After finishing the first assignment i switched to KaliLinux in a VM for convenience reasons.
+	
+	\section*{Level 2}
+	\subsection*{Assignment}
+	Find out which of the members has the highest balance on his/her account. You will not be able to see the balance on the website, you must find it out by passing an appropriate SQL query to the server.
+	
+	\subsection*{Description}
+	\solution{Name}{Daniel Davis}
+	\solution{Balance}{295000}
+	
+	For the second part of the assignment I started to dig deeper into tutorials about SQL in general\footnote{\url{http://www.w3schools.com/sql/}} and  SQL-Injections in particular\footnote{\url{http://www.kalitutorials.net/2014/03/sql-injection-how-it-works.html}}\footnote{\url{http://www.kalitutorials.net/2014/03/hacking-websites-using-sql-injection.html}}\footnote{\url{http://www.kalitutorials.net/2015/02/blind-sql-injection.html}}\footnote{\url{http://www.kalitutorials.net/2014/03/hacking-website-with-sqlmap-in-kali.html}}. Also watched a some tutorials on how to SQLi with SQLmap \footnote{\url{https://www.youtube.com/watch?v=clczL7x1T4Y}}\footnote{\url{https://www.youtube.com/watch?v=jSPr3MPPLLM}}\footnote{\url{https://www.youtube.com/watch?v=yPMbb38pwVI}}\footnote{\url{https://www.youtube.com/watch?v=y4nMgoY5fpY}} .
+	Giving SQLmap just the url as parameter didn't work ,so I had to use a HTTP POST request instead. Weapon of choice was BurpSuite in intercept mode with a configured browser for localhost:8080 which is the default configuration for BurpSuit proxy \footnote{\url{https://www.youtube.com/watch?v=qsE04AhlJrc}}.
+	With the request from the second and third task recorded and saved to request2.txt and request3.txt I openend 3 terminals and started analysing the database. \\
+	I did so with 3 terminals open seperately. The first for sqlmap\footnote{\url{https://github.com/sqlmapproject/sqlmap/wiki/Usage}} with request2.txt the second one for sqlmap with request3.txt and the third one for looking at the dumps and figuring out where I was and what i got so far.\\
+	The database dumps are shown in the tables below or can be looked up as the original csv-files at my github\footnote{\url{https://github.com/Acrasy/IntroSec-SQLi/tree/master/sqlmap-files/dump}}.
+	
+	\begin{lstlisting}
+	11  sqlmap -r /request.txt  -D inject_2 --tables --threads=5
+	14  sqlmap -r /request.txt  -D inject_2 --threads=5 -T accounts --dump
+	\end{lstlisting}
+	
+	\begin{lstlisting}
+	8  sqlmap -r /request.txt  -D inject_3  --threads 5 --tables
+	11  sqlmap -r /request.txt  -D inject_3  --threads 5 -T vip --dump
+	12  sqlmap -r /request.txt  -D inject_3  --threads 5 -T regular --dump
+	\end{lstlisting}
+	
+	\begin{lstlisting}
+	49  cd dump/inject_2/
+	52  cat accounts.csv 
+	53  cd ..
+	56  cd inject_3/
+	57  cat vip.csv
+	58  cat regular.csv 
+	\end{lstlisting}
+	
+	Above I gave an excerpt of the commands that I used. Below I will explain some flags that you can see.
+	
+	\begin{itemize}
+		\item -r 			Allowed me to use HTTP POST request instead of the full URL
+		\item -D			Name the Database to work with
+		\item --threads 5	To make the process faster
+		\item -T $"name"$	Gives the name of the table to work with
+		\item --dump		Saves the output to a textfile
+	\end{itemize}	
+	
+	\section*{Accounts-DB}
+	\begin{tabular}[H]{|r|l|r|c|}
+		\bfseries ID & \bfseries Name & \bfseries Balance & \bfseries AccountNumber
+		\csvreader[head to column names]{accounts.csv}{}	
+		{\\ \hline\id  & \name & \balance & \accountno} 
+	\end{tabular}
+	
+	
+
+	
+	
+	\section*{Level 3}
+	\subsection*{Assignment}
+	There is a members database which consists of two tables \texttt{regular} and
+	\texttt{vip}. Find out the \texttt{memberno} of the member who had the highest
+	balance in step two. The \texttt{name} of every member has a suffix
+	\texttt{(reg)} or \texttt{(VIP)} - this way you will recognize which table you are operating on. Again, you will
+	not be able to see the \texttt{memberno} on the website but you must try to find it by
+	using an appropriate SQL query.
+	
+	\subsection*{Description}
+	\solution{MemberNo}{13213}
+	
+	Step 3 was just compare the two dump files that i got from the second exercise and write down the membernumber of the person with the highest balance. To no surprise Daniel Davis belonged to the vip-members and not the regulars.  \\
+
+	\subsection*{Regulars}
+	\begin{tabular}[H]{|r|l|c|}
+		\bfseries ID & \bfseries Name & \bfseries MemberNumber
+		\csvreader[head to column names]{regular.csv}{}	
+		{\\ \hline\id  & \name & \memberno} 
+	\end{tabular}
+	
+	\subsection*{VIP's}
+	\begin{tabular}[H]{|r|l|c|}
+		\bfseries ID & \bfseries Name & \bfseries MemberNumber
+		\csvreader[head to column names]{vip.csv}{}	
+		{\\ \hline\id  & \name & \memberno} 
+	\end{tabular}
+
+	\subsection*{}
+	Comparing the VIP-table and the Accounts-DB one can clearly see that Daniel Davis'es membernumber is 13213.
+	Also you see that the names differ greatly, I assume to make the manual approach via changing the URL easier. 
+\end{document}
