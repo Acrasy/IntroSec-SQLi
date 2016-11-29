@@ -1,7 +1,4 @@
     1  man sqlmap | grep level
-    2  top
-    3  htop
-    4  top
     5  man sqlmap | grep tamper
     6  man sqlmap
     7  cd /
