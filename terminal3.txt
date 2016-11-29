@@ -1,0 +1,59 @@
+    1  man sqlmap | grep level
+    2  top
+    3  htop
+    4  top
+    5  cd /root/.sqlmap/output/seclva.ifs.tuwien.ac.at
+    6  ls -a
+    7  cat log
+    8  cat session.sqlite 
+    9  cat target.txt 
+   10  cd ..
+   11  ls
+   12  cd ..
+   13  ls
+   14  cd ..
+   15  ls
+   16  cd /root/.sqlmap/output/seclva.ifs.tuwien.ac.at
+   17  clear
+   18  cat log
+   19  cat dump/
+   20  cd dump/
+   21  ls
+   22  ls -a
+   23  cd ..
+   24  ls
+   25  cat log
+   26  cd ..
+   27  ls
+   28  cd seclva.ifs.tuwien.ac.at/
+   29  cd dump/
+   30  ls
+   31  cat ince
+   32  cat inject_2/
+   33  cd inject_2/
+   34  ls
+   35  cat accounts.csv 
+   36  ls
+   37  cat accounts.csv
+   38  cat accounts.csv.1 
+   39  mv accounts.csv names.csv
+   40  cat names.csv 
+   41  mv accounts.csv.1 balance.csv
+   42  ls
+   43  cd ..
+   44  ls
+   45  cd ..
+   46  ls
+   47  cat log
+   48  ls
+   49  cd dump/inject_2/
+   50  ls
+   51  cat accout
+   52  cat accounts.csv 
+   53  cd ..
+   54  ls
+   55  cd inject_
+   56  cd inject_3/
+   57  cat vip.csv
+   58  cat regular.csv 
+   59  history > terminal3.txt
