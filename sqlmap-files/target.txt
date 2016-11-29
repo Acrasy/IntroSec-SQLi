@@ -1,0 +1,3 @@
+http://seclva.ifs.tuwien.ac.at:80/sqli/sql_level1.php (POST)
+
+user=asdf ' or '1'%3D'1&pwd=' or '1'%3D'1&set_answer=Ok
